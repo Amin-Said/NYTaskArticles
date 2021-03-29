@@ -3,6 +3,8 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-kapt'
     id 'androidx.navigation.safeargs.kotlin'
+    id 'jacoco'
+
 
 }
 
@@ -20,6 +22,8 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
+
     buildFeatures {
         viewBinding true
     }
@@ -27,6 +31,9 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            testCoverageEnabled true
         }
     }
     compileOptions {
@@ -123,4 +130,8 @@ dependencies {
     // mockito kotlin
     testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:2.1.0"
 
+}
+
+jacoco {
+    toolVersion = "0.8.6"
 }
