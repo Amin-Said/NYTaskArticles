@@ -27,8 +27,4 @@ class MainActivityTest{
         onView(withId(R.id.nav_host_fragment)).check(matches(isDisplayed()))
     }
 
-    @Test
-    fun test_isTitleTextDisplayed() {
-        onView(withId(R.id.nav_host_fragment)).check(matches(isDisplayed()))
-    }
 }

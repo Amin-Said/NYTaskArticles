@@ -22,12 +22,12 @@ class MainActivity : AppCompatActivity() {
 
         navController = Navigation.findNavController(this, R.id.nav_host_fragment)
 
-        appBarConfiguration = AppBarConfiguration.Builder(navController.getGraph()).build()
+        appBarConfiguration = AppBarConfiguration.Builder(navController.graph).build()
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration)
     }
 
     fun setActionBarTitle(title: String?) {
-        supportActionBar!!.title = title
+        title.also { supportActionBar!!.title = it }
     }
 
     override fun onSupportNavigateUp(): Boolean {
