@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/article_iv"
+        android:layout_width="@dimen/article_image_width_for_list"
+        android:layout_height="@dimen/article_image_height_for_list"
+        android:layout_marginStart="@dimen/article_padding_for_views_normal"
+        android:layout_marginTop="@dimen/article_padding_for_views_normal"
+        android:layout_marginBottom="@dimen/article_padding_for_views_normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src= "@drawable/ic_launcher_background"
+       />
+
+    <TextView
+        android:id="@+id/article_title_tv"
+        style="@style/Title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/article_padding_for_views_normal"
+        android:layout_marginTop="@dimen/article_padding_for_views_normal"
+        android:layout_marginEnd="@dimen/article_padding_for_end"
+        android:maxLines="2"
+        app:layout_constraintEnd_toStartOf="@+id/more_iv"
+        app:layout_constraintStart_toEndOf="@+id/article_iv"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/more_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/article_padding_for_views_normal"
+        android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/article_author_tv"
+        style="@style/Text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/article_padding_for_views_normal"
+        android:layout_marginEnd="@dimen/article_padding_for_views_normal"
+        android:maxLines="1"
+        app:layout_constraintBottom_toBottomOf="@+id/date_icon"
+        app:layout_constraintEnd_toStartOf="@+id/date_icon"
+        app:layout_constraintStart_toEndOf="@+id/article_iv"
+        app:layout_constraintTop_toTopOf="@+id/date_icon" />
+
+    <TextView
+        android:id="@+id/article_date_tv"
+        style="@style/Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/article_padding_for_end"
+        app:layout_constraintBottom_toBottomOf="@+id/date_icon"
+        app:layout_constraintEnd_toStartOf="@+id/more_iv"
+        app:layout_constraintTop_toTopOf="@+id/date_icon" />
+
+    <ImageView
+        android:id="@+id/date_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/article_padding_for_views_normal"
+        android:layout_marginEnd="@dimen/article_padding_for_views_normal"
+        android:src="@drawable/ic_baseline_date_range_24"
+        app:layout_constraintEnd_toStartOf="@+id/article_date_tv"
+        app:layout_constraintTop_toBottomOf="@+id/article_title_tv" />
+
+    <TextView
+        android:id="@+id/article_details_tv"
+        style="@style/Text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/article_padding_for_views_normal"
+        android:layout_marginTop="@dimen/article_padding_for_views_normal"
+        android:layout_marginEnd="@dimen/article_padding_for_end"
+        android:layout_marginBottom="@dimen/article_padding_for_views_normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/more_iv"
+        app:layout_constraintStart_toEndOf="@+id/article_iv"
+        app:layout_constraintTop_toBottomOf="@+id/article_author_tv" />
+</androidx.constraintlayout.widget.ConstraintLayout>

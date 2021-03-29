@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding_for_recycler_view">8dp</dimen>
+
+    <dimen name="article_padding_for_views_normal">8dp</dimen>
+    <dimen name="article_padding_for_end">16dp</dimen>
+
+
+    <dimen name="article_image_width_for_list">75dp</dimen>
+    <dimen name="article_image_height_for_list">75dp</dimen>
+    <dimen name="article_image_width_for_details">440dp</dimen>
+    <dimen name="article_image_height_for_details">293dp</dimen>
+
+
+    <!--    font sizes-->
+    <dimen name="article_title">18sp</dimen>
+    <dimen name="article_text">14sp</dimen>
+
+
+</resources>
